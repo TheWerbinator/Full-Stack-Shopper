@@ -1,0 +1,41 @@
+.footer-wrapper {
+  margin: 50px auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quick-links {
+  width: 95%;
+  max-width: 100rem;
+  border-top: 1px solid grey;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-info {
+  margin: auto;
+  width: 95%;
+  max-width: 100rem;
+  border-top: 1px solid grey;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-info p {
+  margin: 0;
+  padding: 0;
+}
+
+.payment-copyright {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-options img {
+  width: 200px;
+  height: 32px;
+}
