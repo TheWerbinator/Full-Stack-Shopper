@@ -1,34 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import search from "../../assets/magnifying-glass.png";
-import logo from "../../assets/magnifying-glass.png";
+import logo from "../../assets/logo.png";
 
-const Header = ({ categories }) => {
+const Header = ({ quantity, loggedIn, handleAuth, handleRoute, searchButton }) => {
+  
   return (
     <div className='header-wrapper'>
       <div className='header-title'>
-        <div className='header-search'>
+        <div className='header-search' onClick={() => searchButton()}>
           <img src={search} alt='Search' />
         </div>
-        <div className='header-logo'>
-          <img src={logo} alt='Werber Sweets Logo' />
-        </div>
+        <a className='header-logo' onClick={() => handleRoute(0)}>
+          <img src={logo} alt='Cake Palace Logo' />
+        </a>
         <div className='header-buttons'>
-          <button>Login</button>
-          <button>Cart</button>
+          {loggedIn ? (
+            <button>View Profile</button>
+          ) : (
+            <button onClick={() => handleAuth(1)}>Login</button>
+          )}
+          <button onClick={() => handleRoute(2)}>Cart ({quantity})</button>
         </div>
-      </div>
-
-      <div className='header-categories'>
-        {categories.length
-          ? categories.map((cat) => {
-              return (
-                <a href='#' key={cat.name}>
-                  {cat.name}
-                </a>
-              );
-            })
-          : null}
       </div>
     </div>
   );

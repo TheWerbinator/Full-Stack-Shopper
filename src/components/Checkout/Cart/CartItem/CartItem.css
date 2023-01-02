@@ -1,0 +1,40 @@
+.cart-headers,
+.cart-product-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.cart-headers :nth-child(1) {
+  padding-left: 40px;
+  width: 54%;
+}
+
+.cart-product-details :nth-child(3) {
+  width: 10%;
+}
+
+.cart-product-summary {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  width: 60%;
+}
+
+select {
+  width: 10%;
+}
+
+.cart-product-images {
+  display: flex;
+  padding: 0 10px 0 0;
+  height: 100px;
+}
+
+.close-x {
+  width: 40px;
+}
+
+.main-image {
+  width: 200px;
+}

@@ -28,7 +28,7 @@ const Footer = () => {
               alt='Merchant Equipment Store Credit Card Logos'
             />
           </div>
-          <p className='copyright'>Copyright 2022, Werber Sweets</p>
+          <p className='copyright'>Copyright 2022, Cake Palace Inc.</p>
         </div>
       </div>
     </div>
