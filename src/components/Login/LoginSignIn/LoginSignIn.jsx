@@ -96,7 +96,6 @@ class SignIn extends React.Component {
   handleAddData = (e) => {
     e.preventDefault();
     const errorCheck = this.checkErrorBeforeSave();
-    console.log('errorCheck', errorCheck);
     if (errorCheck === false) {
       this.props.handleLoggedIn(
         this.state.authData.email,

@@ -6,12 +6,7 @@ import Home from "./components/Home/Home";
 import Product from "./components/Product/Product";
 import Checkout from "./components/Checkout/Checkout";
 import Login from "./components/Login/Login";
-
-const options = {
-  headers: {
-    "X-Authorization": "pk_test_488771077b6e894232a62ac87db0d9a1ab32d5aab3494",
-  },
-};
+import { API_URL, OPTIONS } from './constants.js';
 
 function App() {
   const [route, setRoute] = useState("home");
@@ -52,10 +47,10 @@ function App() {
   };
 
   useEffect(() => {
-    fetchProducts("https://api.chec.io/v1/products?limit=25/", options).then(
+    fetchProducts(`${API_URL}/products?limit=25/`, OPTIONS).then(
       (result) => setProducts(result)
     );
-    fetchCategories("https://api.chec.io/v1/categories/", options).then(
+    fetchCategories(`${API_URL}/categories/`, OPTIONS).then(
       (result) => setCategories(result)
     );
   }, []);
